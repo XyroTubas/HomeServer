@@ -1,0 +1,39 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Private keys and certificates
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+credentials/
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+
+# Logs
+*.log
+logs/
+
+# Backups
+backups/
+restic/
+
+# Personal data and media
+media/
+photos/
+documents/
+
+# Docker persistent data
+volumes/
+docker-volumes/
+
+# macOS / Windows
+.DS_Store
+Thumbs.db
