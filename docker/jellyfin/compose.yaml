@@ -1,0 +1,20 @@
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: jellyfin
+    restart: unless-stopped
+
+    ports:
+      - "8096:8096/tcp"
+      - "7359:7359/udp"
+
+    volumes:
+      - /opt/docker/jellyfin/config:/config
+      - /opt/docker/jellyfin/cache:/cache
+
+      - type: bind
+        source: /mnt/jellyfin
+        target: /media
+        read_only: true
+        bind:
+          create_host_path: false
